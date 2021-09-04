@@ -16,6 +16,12 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-const product = new mongoose.model("Prod", productSchema);
+// productSchema.post("save", (req,res,next)=>{
+//   // const {id: productId} = req.body.Product
+//   console.log("post")
+//   next()
+// })
 
-module.exports = product;
+const Product = new mongoose.model("Prod", productSchema);
+
+module.exports = Product;

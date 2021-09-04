@@ -118,9 +118,11 @@ exports.protect = async (req, res, next) => {
       decodeToken,
       process.env.jwt_web_secret
     );
-    res.status(200).json({
-      id,
-    });
+    // req.user = user;
+    // return res.status(200).json({
+    //   status: "success",
+    //   id,
+    // });
     next();
   } catch (error) {
     return res.status(404).json({
